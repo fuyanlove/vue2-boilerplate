@@ -11,10 +11,9 @@ export default {
     },
     computed: {},
     methods: {},
+    directives: {},
     components: {},
-    mounted:function (){
-        console.log(this.$store.state.test)
-    }
+    mounted: function () {},
 };
 </script>
 

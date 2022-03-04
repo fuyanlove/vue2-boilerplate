@@ -4,7 +4,7 @@
 ## 初始化说明
 #### 项目创建
 1. 🌈 修改 ***package.json*** 中的name字段为`$repo`
-3. 🌈 指定 ***.env*** 中的 [**`STATIC_PATH`**](#静态资源路径)
+3. 🌈 指定 ***.env*** 中的 **`STATIC_PATH`**
 
 #### 项目启动
 1. 🌈 `npm install` 安装依赖
