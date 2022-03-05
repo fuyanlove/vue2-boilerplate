@@ -1,0 +1,44 @@
+name: Build
+on:
+    push:
+        branches:
+            - master
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            # TODO:私有包指定域
+            - name: Use Node.js
+              uses: actions/setup-node@v3
+            #   with:
+            #       always-auth: true
+            #       node-version: "16.x"
+            #       registry-url: https://npm.pkg.github.com
+            #       scope: "@org"
+
+            - name: Install dependencies
+              run: npm ci
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+            - name: Build
+              run: npm run build
+            - name: Deploy Build
+              uses: JamesIves/github-pages-deploy-action@releases/v3
+              with:
+                  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                  BRANCH: dist
+                  FOLDER: dist
+                  CLEAN: true
+
+            - name: OSS
+              uses: manyuanrong/setup-ossutil@v2.0
+              with:
+                  endpoint: "oss-cn-zhangjiakou.aliyuncs.com"
+                  access-key-id: ${{secrets.ACCESSKEY_ID}}
+                  access-key-secret: ${{secrets.ACCESS_KEY_SECRET}}
+            # TODO:配置oss路径
+            - run: ossutil cp -rf dist oss://deepberry/static/$project

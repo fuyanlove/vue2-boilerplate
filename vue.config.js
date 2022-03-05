@@ -1,6 +1,6 @@
 const path = require("path");
 const pkg = require("./package.json");
-const Setting = require("./setting.json");
+const project = require("./project.json");
 
 module.exports = {
     //❤️ Multiple pages ~
@@ -20,14 +20,14 @@ module.exports = {
     // },
 
     //❤️ Proxy ~
-    devServer: {
-        proxy: {
-            "/api/cms": {
-                target: process.env["DEV_SERVER"] == "true" ? "http://localhost:5120" : "https://cms.jx3box.com",
-            },
-        },
-        disableHostCheck: true,
-    },
+    // devServer: {
+    //     proxy: {
+    //         "/api/cms": {
+    //             target: process.env["DEV_SERVER"] == "true" ? "localhost" : "remote",
+    //         },
+    //     },
+    //     disableHostCheck: true,
+    // },
 
     //❤️ define path for static files ~
     publicPath:
@@ -46,10 +46,10 @@ module.exports = {
         config.plugin("html").tap((args) => {
             args[0].meta = {
                 //------设置SEO信息
-                Keywords: Setting.keys,
-                Description: Setting.desc,
+                Keywords: project.keys,
+                Description: project.desc,
             };
-            args[0].title = Setting.title; //------自动添加标题后缀
+            args[0].title = project.title; //------自动添加标题后缀
             return args;
         });
 
