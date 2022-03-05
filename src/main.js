@@ -1,5 +1,3 @@
-Vue.config.productionTip = false;
-
 // 第三方UI组件
 import Vue from "vue";
 import ElementUI from "element-ui";
