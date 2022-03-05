@@ -3,15 +3,15 @@
 </template>
 
 <script>
-export default {
-    name: "Index",
-    props: [],
-    data: function () {
-        return {};
-    },
-    computed: {},
-    methods: {},
-    created: function () {},
-    components: {},
-};
+    export default {
+        name: "Index",
+        props: [],
+        data: function () {
+            return {};
+        },
+        computed: {},
+        methods: {},
+        created: function () {},
+        components: {},
+    };
 </script>
