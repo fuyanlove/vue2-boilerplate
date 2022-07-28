@@ -1,13 +1,15 @@
-// 第三方UI组件
+// core
 import Vue from "vue";
+import App from "./App.vue";
+
+// ui
 import ElementUI from "element-ui";
 Vue.use(ElementUI);
 
-// 数据与路由
+// store & router
 import router from "./router";
 import store from "./store";
 
-import App from "./App.vue";
 new Vue({
     router,
     store,

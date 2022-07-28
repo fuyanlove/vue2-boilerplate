@@ -1,5 +1,5 @@
 <template>
-    <div class="v-index">
+    <div class="p-index">
         Index
 
         <img src="@/assets/img/test.png" style="width: 32px" />
@@ -8,19 +8,19 @@
 </template>
 
 <script>
-    export default {
-        name: "Index",
-        props: [],
-        data: function () {
-            return {};
-        },
-        computed: {},
-        methods: {},
-        created: function () {},
-        components: {},
-    };
+export default {
+    name: "Index",
+    props: [],
+    data: function () {
+        return {};
+    },
+    computed: {},
+    methods: {},
+    created: function () {},
+    components: {},
+};
 </script>
 
 <style scoped lang="less">
-    @import "~@/assets/css/index.less";
+@import "~@/assets/css/index.less";
 </style>

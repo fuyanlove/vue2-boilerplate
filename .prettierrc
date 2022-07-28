@@ -16,6 +16,6 @@
     "insertPragma": false,
     "proseWrap": "preserve",
     "htmlWhitespaceSensitivity": "css",
-    "vueIndentScriptAndStyle": true,
+    "vueIndentScriptAndStyle": false,
     "embeddedLanguageFormatting": "auto"
 }

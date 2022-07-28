@@ -6,7 +6,7 @@
 
 ## 静态资源
 
--   `.env`指定静态资源路径
+-   `.env`指定静态资源模式，`setting.json`指定静态资源路径
 -   `.github/workflows`指定 oss 路径
 -   配置 secrets：`ACCESS_TOKEN`，仓库写+包读取权限
 -   配置 secrets：`ACCESSKEY_ID`和`ACCESS_KEY_SECRET`，oss 读写权限
