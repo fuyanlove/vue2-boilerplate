@@ -37,8 +37,8 @@ jobs:
             - name: OSS
               uses: manyuanrong/setup-ossutil@v2.0
               with:
-                  endpoint: "oss-cn-zhangjiakou.aliyuncs.com"
+                  endpoint: "oss-cn-hangzhou.aliyuncs.com"
                   access-key-id: ${{secrets.ACCESSKEY_ID}}
                   access-key-secret: ${{secrets.ACCESS_KEY_SECRET}}
             # TODO:配置oss路径
-            - run: ossutil cp -rf dist oss://deepberry/static/$project
+            - run: ossutil cp -rf dist oss://$bucket/$path-to
