@@ -4,7 +4,7 @@
 
         <img src="@/assets/img/test.png" style="width: 32px" />
         <img src="@/assets/img/test.svg" svg-inline style="width: 32px" />
-        <img src="@hapi/topo/test.svg" svg-inline style="width: 32px" />
+        <!-- <img src="@hapi/topo/test.svg" svg-inline style="width: 32px" /> -->
     </div>
 </template>
 
